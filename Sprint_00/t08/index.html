@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="t08" content="t08">
+    <link rel="stylesheet" href="style.css">
+    <title>t08</title>
+</head>
+<body>
+    <form id = "my_form" >
+        <fieldset >
+            <legend>
+                About the Superhero
+            </legend>
+
+            <div>
+                <span>Real Name</span>
+                <input autofocus placeholder="Superhero real name">
+                <span>Superhero Name</span>
+                <input placeholder="Superhero alias">
+                <span>Age</span>
+                <input type="number" min= "1" max ="999" step ="1">
+            </div>
+
+            <div>
+                <span>About</span>
+                <textarea rows="5" cols="70" maxlength="500" placeholder="Information about the superhero, max 500 sybmols"></textarea>
+            </div>
+
+            <div>
+                <span>Photo: </span>
+                <input type= "file">
+            </div>
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend>
+                Powers
+            </legend>
+            
+            <div>
+                <input type = "checkbox" value = "Telekinesis"><span> Telekinesis</span>
+                <input type = "checkbox" value = "Super strenght or speed"><span> Super strenght or speed</span>
+                <input type = "checkbox" value = "Shapeshifting"><span> Shapeshifting</span>
+                <input type = "checkbox" value = "Fight"><span> Fight</span>
+                <input type = "checkbox" value = "Elemental control"><span> Elemental control</span>
+                <input type = "checkbox" value = "Other"><span> Other</span>
+            </div>
+    
+            <div>
+                <span>Level of control </span><input type="range" min="0" max="10" step="1" value="1"> 
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>
+                Origin of Powers
+            </legend>
+            
+            <div>
+                <input name="radio" type="radio" value = "Uknown"><span> Uknown</span>
+                <input name="radio" type="radio" value = "Fleak lab accident"><span> Fleak lab accident</span>
+                <input name="radio" type="radio" value = "Chosen by an ancident wise being"><span> Chosen by an ancident wise being</span>
+                <input name="radio" type="radio" value = "The superhero is no human"><span> The superhero is no human</span>
+                <input name="radio" type="radio" value = "Elemental control"><span> Elemental control</span>
+                <input name="radio" type="radio" value = "Other"><span> Other</span>
+            </div>
+        </fieldset>
+        <div>
+            <button>CLEAR</button>
+            <button>SEND</button>
+        </div>
+
+    </form>
+</body>
+</html>

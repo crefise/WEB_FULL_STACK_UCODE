@@ -1,0 +1,59 @@
+
+
+#my_table {
+    width: 100%;
+    background: linear-gradient(to right, #6e0000, antiquewhite);
+    border: solid 4px black;
+    text-align: center;
+}
+
+.name_str_class {
+    color: #ffe369;
+    font-weight: bold;
+    padding: 10px;
+    background-color:  rgba(110, 0, 0, 0.4);
+    border: solid 2px rgba(189, 195, 199, 0.05);
+}
+
+
+
+.columns {
+    color: midnightblue;
+    border: solid 2px rgba(189, 195, 199, 0.05);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.standart_answer {
+    color : midnightblue;
+    background-color: antiquewhite;
+}
+
+.active_ansver{
+    color : white;
+    background-color: darkred;
+}
+
+.name_superhero {
+    color : white;
+    font-weight: bold;
+}
+
+.name_superhero_2{
+    border: none;
+    color : white;
+    font-weight: bold;
+    background-color: rgba(143,148,251, 0.1);
+}
+.link {
+    color : white;
+    font-weight: bold;
+}
+#link {
+    color : white;
+}
+A {
+    color : white;
+}

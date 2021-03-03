@@ -1,0 +1,22 @@
+
+.div {
+    text-align: center;
+    display: inline-block;
+}
+
+.date {
+    font-size: 1.5em;
+    font-family: Lato Regular, Arial, Helvetica, sans-serif;
+    background-color: rgb(113, 184, 204);
+    display: flex;
+    padding-left: 25px;
+
+}
+
+.degree {
+    font-size: 2em;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+.div:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}

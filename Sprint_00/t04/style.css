@@ -1,0 +1,84 @@
+img {
+    width: 150px;
+    height: 182px;
+}
+div {
+    display: inline-block;
+}
+
+.main_div {
+    height: 213px;
+    width: 270px;
+    position: relative;
+}
+
+.text {
+    margin-right: 10px;
+    text-align: right;
+    font-size: 12px;
+    color: white;
+    font-family: Verdana;
+}
+.real_name {
+    text-align: right;
+    font-size: 9px;
+    color : rgba(255, 255, 255, 0.5)
+}
+
+#fone_capitan_america {
+    width: 270px;
+    height: 140px;
+    background: linear-gradient(#4568DC, #B06AB3);
+    position: absolute;
+    margin-top: 47px;
+    border-radius: 5px;
+}
+#fone_iron_man {
+    width: 270px;
+    height: 140px;
+    background: linear-gradient(#e52d27, #b31217);
+    position: absolute;
+    margin-top: 47px;
+    border-radius: 5px;
+
+}
+#fone_black_widow {
+    width: 270px;
+    height: 140px;
+    background: linear-gradient(#000, #61045F);
+    position: absolute;
+    margin-top: 47px;
+    border-radius: 5px;
+
+}
+#fone_spider_man {
+    margin-top: 20px;
+    width: 270px;
+    height: 140px;
+    background: linear-gradient(#e52d27, #000);
+    position: absolute;
+    margin-top: 47px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+#img_capitan_america {
+    position: absolute;
+    margin-top: -10px;
+}
+#img_iron_man {
+    position: absolute;
+    margin-top: -10px;
+}
+#img_black_widow {
+    position: absolute;
+    margin-top: -10px;
+}
+#img_spider_man {
+    position: absolute;
+    margin-top: +35px;
+}
