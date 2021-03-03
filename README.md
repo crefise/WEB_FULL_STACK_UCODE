@@ -1,6 +1,8 @@
 # WEB_FULL_STACK_UCODE
-<h1>Sprint00</h1>
 
+<b>During my study in UCODE-CONNECT, I needed to master FULL Stack Web, It was major STAGE_3.</b>
+<h1>Sprint00</h1>
+While this Sprint I learned the basics of HTML and CSS (tags, position, colors, tables, etc.)
 <h2>Task00</h2>
 
 ![alt text](https://github.com/crefise/WEB_FULL_STACK_UCODE/blob/master/Screenshot/Sprint00_t00.png)
