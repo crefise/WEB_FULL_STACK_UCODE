@@ -1,0 +1,542 @@
+body {
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(to left,rgb(83, 80, 80), white);
+    font-family: monospace;
+}
+
+#catalog_menu {
+    text-align: left;
+}
+
+#header_div {
+    background-color: rgb(87, 84, 84);
+    color:white;
+    width: 100%;
+    height:  auto;
+
+}
+
+#header_div div[class="phone_div"] {
+    position: static;
+    left: 80%;
+}
+
+
+
+#name_div{
+    margin-left: 20px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+
+}
+.link_div {
+    margin-left: 30px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+}
+
+.search_div {
+    margin-left: 30px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+}
+.phone_div {
+    margin-left: 10px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    text-align: right;
+   
+
+}
+.link {
+    margin-left: 10px;
+    color:white;
+    border: 1px solid rgb(0, 0, 0);
+    border-top: none;
+    border-bottom: none;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    outline: none;
+
+    
+}
+
+#search_input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+
+}
+
+
+.asnwer {
+ 
+    padding: 10px;
+}
+
+.input_checkbox {
+    display: none;
+}
+.text {
+    user-select: none;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background: none;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 90px;
+    width: 200px;
+    padding: 20px;
+
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+
+.input_checkbox:checked + .text {
+    outline: none;
+    color:white;
+    background: rgb(55, 55, 58);
+}
+
+.input_checkbox:checked + .text::after {
+    content: " \2714";
+}
+
+#Catalog {
+
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px black solid;
+    
+    width: 200px;
+}
+
+
+.popular {
+   
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 205px);
+    margin-left: 0%;
+    height: 500px;
+    border: 1px solid black;
+}
+
+#Popular {
+    text-align: center;
+    font-size: 30px;
+}
+.screen {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: calc(50% - 200px);
+
+}
+#screen_1 {
+    
+    background-image: url(assets/images/gta5.jpeg);
+    border-radius: 50px;
+    display: none;
+}
+#screen_2 {
+    background-image: url(assets/images/csgo.jpeg);
+    border-radius: 50px;
+    display: none;
+}
+#screen_3 {
+    background-image: url(assets/images/rust.jpeg);
+    border-radius: 50px;
+    display: none;
+}
+#screen_4 {
+    background-image: url(assets/images/dota.png);
+    border-radius: 50px;
+    display: none;
+}
+#slider_div {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 450px;
+ 
+}
+
+#key_1:checked ~ #screen_1{
+    display: block;
+}
+
+#key_2:checked ~ #screen_2{
+    display: block;
+}
+
+#key_3:checked ~ #screen_3{
+    display: block;
+}
+
+#key_4:checked ~ #screen_4{
+    display: block;
+}
+
+#key_1 {
+    display: none;
+}
+#key_2 {
+    display: none;
+}
+#key_3 {
+    display: none;
+}
+#key_4 {
+    display: none;
+}
+
+.key_label::after {
+    content: "\2606";
+}
+
+
+#setting {
+    margin-top: 25px;
+    margin-left: 10px;
+    float: left;
+
+    display: block;
+    border: 1px solid black;
+    border-right: none;
+    width: 20%;
+    height: 400px;
+}
+#catalog {
+    margin-top: 25px;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0); 
+    width:75%;
+    height: 800px;
+    text-align: center;
+
+}
+.card {
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.catalog_img {
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.price_in_card {
+    font-size: 30px;
+}
+
+.aviable {
+    color: rgb(209, 24, 24);
+}
+
+.buy_key {
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.2s;
+    box-shadow: 0 -3px rgb(133, 63, 63) inset;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(114, 43, 43);
+    color: white;
+    outline: none;
+}
+
+.not_buy_key {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.2s;
+    box-shadow: 0 -3px rgb(26, 25, 25) inset;
+    background: rgb(14, 13, 13);
+    color: white;
+    outline: none;
+}
+
+.buy_key:hover { 
+    background: rgb(121, 16, 16);
+ }
+.buy_key:active {
+  background: rgb(136, 50, 50);
+  box-shadow: 0 3px rgb(138, 82, 82) inset;
+}
+
+.not_buy_key:hover { 
+    background: rgb(87, 79, 79);
+ }
+.not_buy_key:active {
+  background: rgb(68, 67, 67);
+  box-shadow: 0 3px rgb(187, 177, 177) inset;
+}
+
+.sett_list_label {
+    display: block;
+    width: 150px;
+    border: 1px solid black;
+    font-size: 20px;
+    margin-top: 10px;
+    border-left: none;
+}
+.sett_list_input {
+    border-radius: 0px;
+}
+.sett_list_label::before {
+   
+    content: "\2606";
+
+}
+.sett_list_input {
+    display: none;
+}
+
+#sett_1:checked ~ #sett_1_label::before {
+    content: "\2605";
+}
+#sett_2:checked ~ #sett_2_label::before {
+    content: "\2605";
+}
+#sett_3:checked ~ #sett_3_label::before {
+    content: "\2605";
+}
+#sett_4:checked ~ #sett_4_label::before {
+    content: "\2605";
+}
+#sett_5:checked ~ #sett_5_label::before {
+    content: "\2605";
+}
+
+#type_label {
+font-size: 20px;
+font-family: monospace;
+padding: 5px;
+border-bottom: solid 1px black;
+}
+
+#price_label {
+    margin-top: 10px;
+    border-top: solid 1px black;
+    font-size: 20px;
+    font-family: monospace;
+    padding: 5px;
+}
+#prace_label_help {
+    padding: 5px;
+    
+}
+
+
+#path {
+    padding: 10px;
+    text-align: left;
+}
+.active_path {
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.unactive_path {
+    border: none;;
+    display: inline-block;
+}
+
+.unactive_path::after {
+    content: "\003E";
+}
+
+#footer {
+    font-size: 30px;
+    border-top: 1px solid black;
+}
+
+
+
+#card_box {
+    text-align: left;
+    width: calc(100% - 2px);
+    height: 450px;
+}
+
+#card_img_img {
+    width: 600px;
+    height: 400px;
+    float: left;
+    padding-right: 30px;
+
+}
+
+
+
+#card_name {
+    font-size: 30px;
+    padding: 30px;
+    margin-left: 30px;
+    
+}
+
+#card_aviable {
+    font-size: 15px;
+    padding-left: 10px;
+    color: green;
+}
+
+
+#card_description_text {
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+
+
+
+#card_buy_button {
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.2s;
+    background: none;
+    color: white;
+    outline: none;
+    font-size: 50px;
+
+}
+
+#card_buy_button:hover { 
+    background: rgb(121, 16, 16);
+ }
+#card_buy_button:active {
+  background: rgb(136, 50, 50);
+  box-shadow: 0 3px rgb(138, 82, 82) inset;
+}
+
+
+#feedback_table {
+
+    width: auto;
+    height: 450px;
+    margin: 60px;
+    text-align: center;
+}
+
+.feedback_text {
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 300px;
+    padding: 50px;
+
+}
+
+@media screen and (min-width:1240px){
+    #header_div div[class="phone_div"] {
+        position: absolute;
+    }
+}
+@media screen and (max-width:942px) {
+    #catalog {
+        height: 1600px;
+    }
+}
+@media screen and (max-width:795px) {
+    #setting {
+        float: none;
+        border: 1px solid black;
+        width: 150px;
+        margin-left: 35%;
+    }
+    #catalog {
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width:620px) {
+    .popular {
+        height: 290px;
+    }
+    #slider_div {
+        top: 250px;
+    }
+    #screen_1 {
+        width: 200px;
+        height: 200px;
+        margin-left: 95px;
+    }
+    #screen_2 {
+        width: 200px;
+        height: 200px;
+        margin-left: 95px;
+    }
+    #screen_3 {
+        width: 200px;
+        height: 200px;
+        margin-left: 95px;
+    }
+    #screen_4 {
+        width: 200px;
+        height: 200px;
+        margin-left: 95px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    #card_box {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width:839px) {
+    #card_box {
+        height: 800px;
+    }
+    #card_img_img {
+        margin-left: 4.5%;
+        width: 90%;
+        float: none;
+    }
+}
+
+
+@media screen and (max-width:541px) {
+    #card_box {
+        height: 850px;
+    }
+
+}
+

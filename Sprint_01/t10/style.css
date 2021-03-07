@@ -1,0 +1,305 @@
+*{
+    color: white;
+}
+img {
+    width: 50px;
+    height:50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#main_div {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    padding: 30px;
+    padding-right: 10px;
+    background-color: rgb(83, 83, 83)
+}
+
+
+#sett_div {
+    width: 90%;
+    height: 500px;
+    background-color: cadetblue;
+    display: flex;
+    padding-left: 20px;
+    border: 1px solid white;
+    background-color: grey;
+}
+
+
+
+
+#menu_div {
+    width: 10%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+#box_with_menu_key {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(65, 58, 58);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.menu_key {
+    display: flex;
+
+}
+
+#main_fist_column {
+    width: 100%;
+    height: 100%;
+
+}
+
+#main_second_column {
+    width: 100%;
+    height: 100%;
+
+}
+
+.sett_label {
+    margin-top: 30px;
+    font-family: monospace;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#select_form {
+    background: none;
+    outline: none;
+    border: 1px white solid;
+    color: white;
+    width: 200px;
+    height: 30px;
+    background-color: rgb(65, 58, 58);
+    padding-right: 10px;
+
+}
+
+
+.text {
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.checkbox_input {
+    background: rgb(49, 43, 43);
+}
+
+.range_div{
+    position: relative;
+    width: 100%;
+    height: 5%;
+}
+
+
+
+.range_button{
+    margin-left: 15px;
+    width: 70%;
+    appearance: none;
+    background: none;
+    
+}
+.range_button::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #5c9fa8;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+.range_button {
+    height: 1px;
+    background-color: black;
+
+}
+
+.range_button:active{
+    outline: none;
+}
+
+.range_button:focus{
+    outline: none;
+}
+
+
+.box_text_for_range {
+    margin: 10px;
+    display: flex;
+    color: white;
+}
+
+.small_A {
+    display: flex
+}
+.big_A {
+    position: relative;
+    width: 15px;
+    font-size: 30px;
+    margin-left: calc(70%);
+    display: flex
+}
+
+
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(87, 126, 69);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .UI {
+      padding-top: 20px;
+      display: flex;
+      width: 100%;
+  }
+
+  .UI_text {
+      font-family: monospace;
+      margin-top: 5px;
+    display: flex;
+    justify-self: start;
+    font-size: 20px;
+  }
+  .UI_switch {
+    display: flex;
+    margin: auto;
+    margin-right: 30px;
+    
+  }
+
+  .color_div {
+    text-align: center;
+    margin-left: -10px;
+    padding: 0;
+  }
+  .color_div input {
+     display: none;
+  }
+
+
+  .color_label {
+    margin: 10px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+     border: 1px solid black;
+      padding: 15px;
+      border-radius: 50%;
+  }
+.color_div label[for="_1"] {
+    background-color: blue;
+}
+.color_div label[for="_2"] {
+    background-color: green;
+}
+.color_div label[for="_3"] {
+    background-color: purple;
+}
+.color_div label[for="_4"] {
+    background-color: yellow;
+}
+.color_div label[for="_5"] {
+    background-color: orange;
+}
+
+#_1:checked + label[for="_1"]::after{
+    color: white;
+    position: absolute;
+    content: "\2714";
+    margin-left: -5px;
+}
+
+#_2:checked + label[for="_2"]::after{
+    color: white;
+    position: absolute;
+    content: "\2714";
+    margin-left: -5px;
+}
+#_3:checked + label[for="_3"]::after {
+    color: white;
+    position: absolute;
+    content: "\2714";
+    margin-left: -5px;
+}
+
+#_4:checked + label[for="_4"]::after {
+    color: white;
+    position: absolute;
+    content: "\2714";
+    margin-left: -5px;
+}
+#_5:checked + label[for="_5"]::after {
+    color: white;
+    position: absolute;
+    content: "\2714";
+    margin-left: -5px;
+}
+
+

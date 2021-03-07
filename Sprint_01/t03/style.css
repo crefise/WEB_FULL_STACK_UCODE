@@ -1,0 +1,130 @@
+#head_text {
+    margin-left: 350px;
+    background: linear-gradient( to right ,rgb(119, 109, 109), white);
+    text-align: center;
+    font-size: 50px;
+
+
+    position: relative;
+    text-align: center;
+    width: 100px;
+    margin-left: calc(50% - 165px);
+
+}
+#main_div {
+    padding: 10px;
+}
+.main {
+    position: relative;
+    text-align: center;
+    background-color: yellow;
+    width: 100px;
+    margin-left: calc(50% - 115px);
+}
+.main_2 {
+    position: relative;
+    left: 130px;
+    bottom: 50px;
+}
+
+
+.answer1 {
+    position: absolute;
+    text-align: center;
+    background-color: gold;
+    width: 110px;
+    left: calc(50% - 115px);
+    display: none;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px;
+}
+.answer2 {
+    position: absolute;
+    text-align: center;
+    background-color: gold;
+    width: 100px;
+    margin-left: 89%;
+    top : 0px;
+    display: none;
+    background-color: white;
+    border: 3px solid black;
+    color : black;
+    padding: 5px;
+}
+
+
+
+.answer3 {
+    position: absolute;
+    text-align: center;
+    background-color: gold;
+    width: 100px;
+    margin-left: 89%;
+    top : 20px;
+    display: none;
+    background-color: white;
+    border: 3px solid black;
+    color : black;
+    padding: 5px;
+}
+
+.main:hover + .answer1 {
+    display: block;
+}
+.main_2:hover + .answer1 {
+    display: block;
+}
+.answer1:hover {
+    display: block;
+}
+
+
+.PUDGE:hover + .answer2 {
+    display: block;
+    z-index: 1;
+}
+.answer2:hover {
+    display: block;
+}
+.SLENDER:hover + .answer3 {
+    display: block;
+    z-index: 1;
+}
+.answer3:hover {
+    display: block;
+}
+
+
+.plus {
+    left: calc(50% + 15px);
+    top: 125px;
+    color: white;
+    background-color: black;
+    border: 3px solid rgb(80, 78, 78);
+}
+
+
+.WHITE_MAIN {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.DARK_MAIN {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border: 3px solid rgb(80, 78, 78);
+}
+
+.white_mode {
+    color: white;
+    background-color: black;
+    border: 3px solid rgb(80, 78, 78);
+    
+}

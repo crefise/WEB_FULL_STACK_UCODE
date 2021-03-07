@@ -1,0 +1,18 @@
+.gaunlet {
+    height: 250px;
+    width: 150px;
+}
+
+.first {
+    width: 100px;
+    height: 100px;
+}
+
+.second {
+    width: 100px;
+    height: 100px;
+}
+
+.gaunlet:hover + .div img[class*="first"]{
+    visibility: hidden;
+}

@@ -1,0 +1,59 @@
+
+@media screen and (min-width: 320px) {
+    div div{
+        width: 100%;  
+    }
+}
+
+@media screen and (min-width: 768px) {
+    div div{
+        width: calc(50% - 30px);   
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    div div{
+        width: 280px;
+        min-width: 280px;
+    }
+}
+h2{
+    text-align: center;
+}
+div div{
+    margin:  5px;
+    padding: 5px;
+    border: black 1px solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+.html{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.css{
+    display: flex;
+    flex-flow: row wrap;
+}
+.protocols{
+    display: flex;
+    flex-flow: row wrap;
+}
+.ip{
+    display: flex;
+    flex-flow: row wrap;
+}
+.dns{
+    display: flex;
+    flex-flow: row wrap;
+} 
+
+.http{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+

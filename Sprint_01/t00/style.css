@@ -1,0 +1,15 @@
+#my_img {
+    width: 400px;
+    height: 200px;
+    float: left;
+    padding-right: 15px;
+}
+#my_text {
+    display: block;
+}
+
+@media print {
+    #my_img {
+        float: none;
+    }
+}

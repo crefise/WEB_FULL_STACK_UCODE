@@ -1,0 +1,26 @@
+#box {
+    height: 2em;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#input_box {
+    width: 100%;
+    color: green;
+}
+#input_box:hover {
+    color: red;
+}
+#input_box:focus {
+    color: green;
+}
+#input_button {
+    color: green;
+}
+#input_button:hover {
+    color: red;
+
+}
+h1 {
+    text-align: center;
+}
