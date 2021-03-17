@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang="ru"><head><script>window.currentUser = null;</script><script>window.rateUsdToNative = 73.705;</script><title itemprop="name">Map и Set</title><link href="/pack/styles.80b724269e08720717ea.css" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><!-- chrome autotranslate is enabled only for "en" main version--><meta name="google" content="notranslate"><script>if (window.devicePixelRatio > 1) document.cookie = 'pixelRatio=' + window.devicePixelRatio + ';path=/;expires=Tue, 19 Jan 2038 03:14:07 GMT';</script><link href="//fonts.googleapis.com/css?family=Open+Sans:bold,italic,bolditalic" rel="stylesheet"><link rel="apple-touch-icon-precomposed" href="/img/favicon/apple-touch-icon-precomposed.png"><link rel="canonical" href="https://learn.javascript.ru/map-set"><meta name="msapplication-TileColor" content="#222A2C"><meta name="msapplication-TileImage" content="/img/favicon/tileicon.png"><link rel="icon" href="/img/favicon/favicon.png"><meta itemprop="image" content="https://learn.javascript.ru/img/site_preview_ru_512x512.png"><meta property="og:title" content="Map и Set"><meta property="og:image" content="https://learn.javascript.ru/img/site_preview_ru_1200x630.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="fb:admins" content="100001562528165"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Map и Set"><meta name="twitter:site" content="@iliakan"><meta name="twitter:creator" content="@iliakan"><meta name="twitter:image" content="https://learn.javascript.ru/img/site_preview_ru_512x512.png"><link rel="prev" href="/iterable"><link rel="next" href="/weakmap-weakset"><script>window.GA_ID = "UA-2056213-16";</script><script>window.GTM_ID = 'GTM-WD2DZPG'</script><script>window.YANDEX_METRIKA_ID = 17649010;</script><script>window.GoogleAnalyticsObject="ga",window.ga=function(){window.ga.q.push(arguments)},window.ga.q=[],window.ga.l=Date.now(),ga("create",GA_ID,"auto"),window.GTM_ID&&ga("require",GTM_ID),window.currentUser?ga("set","&uid",currentUser.id):ga("set","anonymizeIp",!0),window.addEventListener("error",function(e){var r=(e.filename||e.errorUrl)+": "+(e.lineno||e.errorLine),n=e.stack||e.error&&e.error.stack;ga("send","exception",{exDescription:e.message+" "+r+" "+n,exFatal:!0})});</script><script src="https://www.google-analytics.com/analytics.js" async></script><script>ga('send', 'pageview');</script><script>window.metrika={reachGoal:function(){}},window.yandex_metrika_callbacks=[function(){try{window.metrika=new Ya.Metrika({id:YANDEX_METRIKA_ID,webvisor:!0,clickmap:!0,params:{user:window.currentUser&&window.currentUser.id}}),metrika.trackLinks({delay:150}),window.addEventListener("error",function(r){window.metrika.reachGoal("JSERROR",{src:(r.filename||r.errorUrl)+": "+(r.lineno||r.errorLine),stack:r.stack||r.error&&r.error.stack,message:r.message})})}catch(r){}}];</script><script src="//mc.yandex.ru/metrika/watch.js" async></script><script>window.RECAPTCHA_ID = "6LfmLAEVAAAAAJMykMnf7aY8nkyTRmYi2ynx51R1";</script><script src="/pack/init.9771e09d377e538d26d9.js"></script><script src="/pack/head.6b155935d2194404a07f.js" defer></script><meta property="og:title" content="Map и Set"><meta property="og:type" content="article"><script src="/pack/tutorial.8688b1e7e90dc2b2410f.js" defer></script><script src="/pack/footer.dfcf48bfd8b0774da895.js" defer></script></head><body class="no-icons"><script>window.fontTest();</script><div class="page-wrapper page-wrapper_sidebar_on"><!--[if IE]><div style="color:red;text-align:center">Извините, Internet Explorer не поддерживается, пожалуйста используйте более новый браузер.</div><![endif]--><div class="sitetoolbar sitetoolbar_tutorial"><script>window.langs = [{"code":"ar","name":"Arabic"},{"code":"az","name":"Azerbaijani"},{"code":"bg","name":"Bulgarian"},{"code":"bn","name":"Bengali"},{"code":"ca","name":"Catalan"},{"code":"cs","name":"Czech"},{"code":"da","name":"Danish"},{"code":"de","name":"German"},{"code":"el","name":"Greek"},{"code":"en","name":"English"},{"code":"es","name":"Spanish"},{"code":"fa","name":"Persian (Farsi)"},{"code":"fr","name":"French"},{"code":"he","name":"Hebrew"},{"code":"hi","name":"Hindi"},{"code":"hu","name":"Hungarian"},{"code":"hy","name":"Armenian"},{"code":"id","name":"Indonesian"},{"code":"it","name":"Italian"},{"code":"ja","name":"Japanese"},{"code":"ka","name":"Georgian"},{"code":"km","name":"Central Khmer"},{"code":"ko","name":"Korean"},{"code":"lt","name":"Lithuanian"},{"code":"me","name":"Montenegrin"},{"code":"ml","name":"Malayalam"},{"code":"nl","name":"Dutch"},{"code":"no","name":"Norvegian"},{"code":"pa","name":"Punjabi"},{"code":"pl","name":"Polish"},{"code":"pt","name":"Portuguese"},{"code":"ro","name":"Romanian"},{"code":"ru","name":"Russian"},{"code":"si","name":"Sinhala"},{"code":"sk","name":"Slovak"},{"code":"sq","name":"Albanian"},{"code":"sr","name":"Serbian"},{"code":"ta","name":"Tamil"},{"code":"te","name":"Telugu"},{"code":"test","name":"Test"},{"code":"th","name":"Thai"},{"code":"tk","name":"Turkmen"},{"code":"tr","name":"Turkish"},{"code":"uk","name":"Ukrainian"},{"code":"uz","name":"Uzbek"},{"code":"v2","name":"v2"},{"code":"vi","name":"Vietnamese"},{"code":"zh-hant","name":"Chinese Traditional"},{"code":"zh","name":"Chinese"}];</script><script>window.lang = "ru";</script><script>{let t=navigator.languages||[];t=t.map(t=>t.toLowerCase());let a,o,i=[];for(let a of window.langs)for(let o of t)if(o===a.code||o.startsWith(a.code+"-")){i.push(a);break}if("en"===lang){let t=i.find(t=>"en"!=t.code);t&&"ru"!=t.code&&(a=`\n            According to your browser language headers, you know ${t.name}. Please help to <a href="https://github.com/javascript-tutorial/${t.code}.javascript.info#readme">translate the tutorial</a> into your language!\n            Thank you!\n          `,o="notify-translate-tutorial")}else if("tr"==lang)a='The Turkish version is only half-translated yet! Please help us with its translation at <a href="https://github.com/javascript-tutorial/tr.javascript.info">GitHub</a>.',o="notify-tr-tutorial";else if("ru"!=lang){i.find(t=>"en"==t.code)&&(a=`\n            According to your browser headers, you know English. Please help to <a href="https://github.com/javascript-tutorial/${lang}.javascript.info#readme">translate the tutorial</a>.\n            Thank you!\n          `,o="notify-translate-tutorial-local")}if(a){let t=`<div class="notification notification_top notification_info sitetoolbar__notification" style="display:none" id="${o}">\n          <div class="notification__content">${a}</div>\n          <button class="notification__close" title="Close"></button>\n        </div>`;document.write(t),showTopNotification()}}</script><div class="sitetoolbar__content"><div class="sitetoolbar__lang-switcher"><button class="sitetoolbar__dropdown-button" data-dropdown-toggler>RU</button><div class="sitetoolbar__dropdown-wrap"><div class="sitetoolbar__dropdown-body"><div class="sitetoolbar__lang-switcher-body"><div class="supported-langs supported-langs_toolbar"><div class="supported-langs__container"><ul class="supported-langs__list" style="height:200px"><li class="supported-langs__item"><a class="supported-langs__link" href="https://ar.javascript.info/map-set"><span class="supported-langs__brief">AR</span><span class="supported-langs__title">عربي</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://javascript.info/map-set"><span class="supported-langs__brief">EN</span><span class="supported-langs__title">English</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://es.javascript.info/map-set"><span class="supported-langs__brief">ES</span><span class="supported-langs__title">Español</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://fr.javascript.info/map-set"><span class="supported-langs__brief">FR</span><span class="supported-langs__title">Français</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://it.javascript.info/map-set"><span class="supported-langs__brief">IT</span><span class="supported-langs__title">Italiano</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://ja.javascript.info/map-set"><span class="supported-langs__brief">JA</span><span class="supported-langs__title">日本語</span></a></li></ul><ul class="supported-langs__list" style="height:128px"><li class="supported-langs__item"><a class="supported-langs__link" href="https://ko.javascript.info/map-set"><span class="supported-langs__brief">KO</span><span class="supported-langs__title">한국어</span></a></li><li class="supported-langs__item supported-langs__item_current"><a class="supported-langs__link" href="https://learn.javascript.ru/map-set"><span class="supported-langs__brief">RU</span><span class="supported-langs__title">Русский</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://tr.javascript.info/"><span class="supported-langs__brief">TR</span><span class="supported-langs__title">Türkçe</span></a></li><li class="supported-langs__item"><a class="supported-langs__link" href="https://zh.javascript.info/map-set"><span class="supported-langs__brief">ZH</span><span class="supported-langs__title">简体中文</span></a></li></ul></div><div class="supported-langs__text">Мы хотим сделать этот проект с открытым исходным кодом доступным для людей во всем мире. Пожалуйста, <a href="https://github.com/javascript-tutorial/translate" rel="noopener noreferrer" target="_blank">помогите нам перевести</a> это руководство на свой язык</div></div></div></div></div></div><div class="sitetoolbar__logo-wrap"><a class="sitetoolbar__link sitetoolbar__link_logo" href="/"><img class="sitetoolbar__logo sitetoolbar__logo_normal" src="/img/sitetoolbar__logo_ru.svg" width="171" alt="" role="presentation"/><img class="sitetoolbar__logo sitetoolbar__logo_small" src="/img/sitetoolbar__logo_small_ru.svg" width="80" alt="" role="presentation"/><script>Array.prototype.forEach.call(document.querySelectorAll("img.sitetoolbar__logo"),function(e){let t=document.createElement("object");t.type="image/svg+xml",t.className=e.className,t.style.cssText="left:0;top:0;position:absolute",t.onload=function(){t.onload=null,e.style.visibility="hidden"},t.data=e.src,e.parentNode.insertBefore(t,e)});</script></a></div><div class="sitetoolbar__nav-toggle-wrap"><button class="sitetoolbar__nav-toggle" type="button"></button></div><nav class="sitetoolbar__sections"><ul class="sitetoolbar__sections-list"><li class="sitetoolbar__section sitetoolbar__section_current"><a class="sitetoolbar__link" href="/">Учебник</a></li><li class="sitetoolbar__section"><a class="sitetoolbar__link" href="/courses">Курсы</a></li><li class="sitetoolbar__section"><a class="sitetoolbar__link" href="https://javascript.ru/forum/">Форум</a></li><li class="sitetoolbar__section"><a class="sitetoolbar__link" href="https://es5.javascript.ru">ES5</a></li><li class="sitetoolbar__section"><a class="sitetoolbar__link" href="/quiz">Тесты знаний</a></li><li class="sitetoolbar__section sitetoolbar__section_dropdown"><button class="sitetoolbar__dropdown-button" data-dropdown-toggler>Скринкасты</button><div class="sitetoolbar__dropdown-wrap"><div class="sitetoolbar__dropdown-body"><ul class="sitetoolbar__dropdown-items"><li class="sitetoolbar__dropdown-item"><a class="sitetoolbar__secondary-link sitetoolbar__dropdown-link" href="/screencast/nodejs">Node.js</a></li><li class="sitetoolbar__dropdown-item"><a class="sitetoolbar__secondary-link sitetoolbar__dropdown-link" href="/screencast/webpack">Webpack</a></li><li class="sitetoolbar__dropdown-item"><a class="sitetoolbar__secondary-link sitetoolbar__dropdown-link" href="/screencast/gulp">Gulp 4</a></li><li class="sitetoolbar__dropdown-item"><a class="sitetoolbar__secondary-link sitetoolbar__dropdown-link" href="/screencast/react">React.js</a></li><li class="sitetoolbar__dropdown-item"><a class="sitetoolbar__secondary-link sitetoolbar__dropdown-link" href="/screencast/angular">Angular</a></li><li class="sitetoolbar__dropdown-item"><a class="sitetoolbar__secondary-link sitetoolbar__dropdown-link" href="/screencast/git">Git</a></li></ul></div></div></li></ul></nav><div class="sitetoolbar__book-wrap"><a class="buy-book-button" href="/ebook"><span class="buy-book-button__extra-text">Купить</span>EPUB/PDF</a></div><div class="sitetoolbar__login-wrap"><button class="sitetoolbar__login sitetoolbar__login_unready" data-action-login></button></div><div class="sitetoolbar__search-wrap"><div class="sitetoolbar__search-content"><form class="sitetoolbar__search" method="GET" action="/search"><button class="sitetoolbar__search-toggle" type="button"></button><div class="sitetoolbar__search-input"><div class="text-input"><input class="text-input__control" name="query" placeholder="Искать на Javascript.ru" required="required" type="text"/></div><button class="sitetoolbar__find" type="submit">Найти</button></div></form></div></div></div><div class="tablet-menu"><div class="tablet-menu__line"><div class="tablet-menu__content"><select class="tablet-menu__nav input-select input-select input-select_small" onchange="if(this.value) window.location.href=this.value"><option value="/" selected>Учебник</option><option value="/courses">Курсы</option><option value="https://javascript.ru/forum/">Форум</option><option value="https://es5.javascript.ru">ES5</option><option value="/quiz">Тесты знаний</option></select></div></div><div class="tablet-menu__line"><div class="tablet-menu__content"><form class="tablet-menu-search" action="/search/"><input class="tablet-menu-search__input" type="search" name="query" placeholder="Поиск в учебнике" required="required"/><button class="tablet-menu-search__button" type="submit" name="type" value="articles">Поиск</button></form></div></div><div class="tablet-menu__line"><div class="tablet-menu__content"><a class="map" href="/tutorial/map" data-action="tutorial-map"><span class="map__text">Карта учебника</span></a></div></div><div class="tablet-menu__line"><div class="tablet-menu__content"><div class="share-icons"><span class="share-icons__title">Поделиться</span><a class="share share_tw" href="https://twitter.com/share?url=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a><a class="share share_fb" href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a><a class="share share_vk" href="https://vkontakte.ru/share.php?url=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a></div></div></div><div class="tablet-menu__line"><div class="tablet-menu__content"><select class="tablet-menu__nav input-select input-select input-select_small" onchange="if(this.value) window.location.href=this.value"><option value="https://ar.javascript.info/map-set">عربي</option><option value="https://javascript.info/map-set">English</option><option value="https://es.javascript.info/map-set">Español</option><option value="https://fr.javascript.info/map-set">Français</option><option value="https://it.javascript.info/map-set">Italiano</option><option value="https://ja.javascript.info/map-set">日本語</option><option value="https://ko.javascript.info/map-set">한국어</option><option value="https://learn.javascript.ru/map-set" selected>Русский</option><option value="https://tr.javascript.info/">Türkçe</option><option value="https://zh.javascript.info/map-set">简体中文</option></select></div></div></div><progress class="tutorial-progress" data-sticky value="43" max="93" data-tooltip="Урок 43 из 93"></progress></div><div class="page page_sidebar_on page_inner_padding"><script>if(localStorage.noSidebar){document.querySelector(".page").classList.remove("page_sidebar_on");var pageWrapper=document.querySelector(".page-wrapper");pageWrapper&&pageWrapper.classList.remove("page-wrapper_sidebar_on")}setTimeout(function(){document.querySelector(".page").classList.add("page_sidebar-animation-on")},0);</script><div class="page__inner"><main class="main main_width-limit"><header class="main__header"><div class="main__header-inner"><div class="main__header-group"><ol class="breadcrumbs"><li class="breadcrumbs__item breadcrumbs__item_home"><a class="breadcrumbs__link" href="/"><span class="breadcrumbs__hidden-text">Учебник</span></a></li><li class="breadcrumbs__item" id="breadcrumb-1"><a class="breadcrumbs__link" href="/js"><span>Язык JavaScript</span></a></li><li class="breadcrumbs__item" id="breadcrumb-2"><a class="breadcrumbs__link" href="/data-types"><span>Типы данных</span></a></li><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Учебник","item":"https://learn.javascript.ru/"},{"@type":"ListItem","position":2,"name":"Язык JavaScript","item":"https://learn.javascript.ru/js"},{"@type":"ListItem","position":3,"name":"Типы данных","item":"https://learn.javascript.ru/data-types"}]}</script></ol><div class="updated-at" data-tooltip="Последнее обновление: 27-го сентября 2020"><div class="updated-at__content">27-го сентября 2020</div></div></div><h1 class="main__header-title">Map и Set</h1></div></header><div class="content"><article class="formatted" itemscope itemtype="http://schema.org/TechArticle"><meta itemprop="name" content="Map и Set"><div itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="email" content="iliakan@gmail.com"><meta itemprop="name" content="Ilya Kantor"></div><div itemprop="articleBody"><p>Сейчас мы знаем о следующих сложных структурах данных:</p>
+<ul>
+<li>Объекты для хранения именованных коллекций.</li>
+<li>Массивы для хранения упорядоченных коллекций.</li>
+</ul>
+<p>Но этого не всегда достаточно для решения повседневных задач. Поэтому также существуют <code>Map</code> и <code>Set</code>.</p>
+<h2><a class="main__anchor" name="map" href="#map">Map</a></h2><p><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a> – это коллекция ключ/значение, как и <code>Object</code>. Но основное отличие в том, что <code>Map</code> позволяет использовать ключи любого типа.</p>
+<p>Методы и свойства:</p>
+<ul>
+<li><code>new Map()</code> – создаёт коллекцию.</li>
+<li><code>map.set(key, value)</code> – записывает по ключу <code>key</code> значение <code>value</code>.</li>
+<li><code>map.get(key)</code> – возвращает значение по ключу или <code>undefined</code>, если ключ <code>key</code> отсутствует.</li>
+<li><code>map.has(key)</code> – возвращает <code>true</code>, если ключ <code>key</code> присутствует в коллекции, иначе <code>false</code>.</li>
+<li><code>map.delete(key)</code> – удаляет элемент по ключу <code>key</code>.</li>
+<li><code>map.clear()</code> – очищает коллекцию от всех элементов.</li>
+<li><code>map.size</code> – возвращает текущее количество элементов.</li>
+</ul>
+<p>Например:</p>
+<div id="hpioi3pudo" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let map = new Map();
+
+map.set(&quot;1&quot;, &quot;str1&quot;);    // строка в качестве ключа
+map.set(1, &quot;num1&quot;);      // цифра как ключ
+map.set(true, &quot;bool1&quot;);  // булево значение как ключ
+
+// помните, обычный объект Object приводит ключи к строкам?
+// Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
+alert(map.get(1)); // &quot;num1&quot;
+alert(map.get(&quot;1&quot;)); // &quot;str1&quot;
+
+alert(map.size); // 3</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Как мы видим, в отличие от объектов, ключи не были приведены к строкам. Можно использовать любые типы данных для ключей.</p>
+<p><strong>Map может использовать объекты в качестве ключей.</strong></p>
+<p>Например:</p>
+<div id="wl38944cbs" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let john = { name: &quot;John&quot; };
+
+// давайте сохраним количество посещений для каждого пользователя
+let visitsCountMap = new Map();
+
+// объект john - это ключ для значения в объекте Map
+visitsCountMap.set(john, 123);
+
+alert(visitsCountMap.get(john)); // 123</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Использование объектов в качестве ключей – это одна из известных и часто применяемых возможностей объекта <code>Map</code>. При строковых ключах обычный объект <code>Object</code> может подойти, но для ключей-объектов – уже нет.</p>
+<p>Попробуем заменить <code>Map</code> на <code>Object</code> в примере выше:</p>
+<div id="7ufxe14tfq" data-trusted="1" class="code-example" data-highlight="[{&quot;start&quot;:6,&quot;end&quot;:7}]">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let john = { name: &quot;John&quot; };
+
+let visitsCountObj = {}; // попробуем использовать объект
+
+visitsCountObj[john] = 123; // возьмём объект john как ключ
+
+// Вот как это было записано!
+alert( visitsCountObj[&quot;[object Object]&quot;] ); // 123</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Так как <code>visitsCountObj</code> – это объект, то все ключи он автоматически преобразует к строке, в итоге получился строковой ключ <code>&quot;[object Object]&quot;</code>. Это не то, чего мы хотим.</p>
+<div class="important important_smart">
+            <div class="important__header"><span class="important__type">Как объект <code>Map</code> сравнивает ключи</span></div>
+            <div class="important__content"><p>Чтобы сравнивать ключи, объект <code>Map</code> использует алгоритм <a href="https://tc39.github.io/ecma262/#sec-samevaluezero">SameValueZero</a>. Это почти такое же сравнение, что и <code>===</code>, с той лишь разницей, что <code>NaN</code> считается равным <code>NaN</code>. Так что <code>NaN</code> также может использоваться в качестве ключа.</p>
+<p>Этот алгоритм не может быть заменён или модифицирован.</p>
+</div></div>
+<div class="important important_smart">
+            <div class="important__header"><span class="important__type">Цепочка вызовов</span></div>
+            <div class="important__content"><p>Каждый вызов <code>map.set</code> возвращает объект map, так что мы можем объединить вызовы в цепочку:</p>
+<div id="xcg066swzu" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>map.set(&quot;1&quot;, &quot;str1&quot;)
+  .set(1, &quot;num1&quot;)
+  .set(true, &quot;bool1&quot;);</code></pre>
+        </div>
+      </div>
+      
+      </div></div></div>
+<h2><a class="main__anchor" name="perebor-map" href="#perebor-map">Перебор Map</a></h2><p>Для перебора коллекции <code>Map</code> есть 3 метода:</p>
+<ul>
+<li><code>map.keys()</code> – возвращает итерируемый объект по ключам,</li>
+<li><code>map.values()</code> – возвращает итерируемый объект по значениям,</li>
+<li><code>map.entries()</code> – возвращает итерируемый объект по парам вида <code>[ключ, значение]</code>, этот вариант используется по умолчанию в <code>for..of</code>.</li>
+</ul>
+<p>Например:</p>
+<div id="79fjxatg2l" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let recipeMap = new Map([
+  [&quot;огурец&quot;, 500],
+  [&quot;помидор&quot;, 350],
+  [&quot;лук&quot;,    50]
+]);
+
+// перебор по ключам (овощи)
+for (let vegetable of recipeMap.keys()) {
+  alert(vegetable); // огурец, помидор, лук
+}
+
+// перебор по значениям (числа)
+for (let amount of recipeMap.values()) {
+  alert(amount); // 500, 350, 50
+}
+
+// перебор по элементам в формате [ключ, значение]
+for (let entry of recipeMap) { // то же самое, что и recipeMap.entries()
+  alert(entry); // огурец,500 (и так далее)
+}</code></pre>
+        </div>
+      </div>
+      
+      </div><div class="important important_smart">
+            <div class="important__header"><span class="important__type">Используется порядок вставки</span></div>
+            <div class="important__content"><p>В отличие от обычных объектов <code>Object</code>, в <code>Map</code> перебор происходит в том же  порядке, в каком происходило добавление элементов.</p>
+</div></div>
+<p>Кроме этого, <code>Map</code> имеет встроенный метод <code>forEach</code>, схожий со встроенным методом массивов <code>Array</code>:</p>
+<div id="bwhfu358fw" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>// выполняем функцию для каждой пары (ключ, значение)
+recipeMap.forEach((value, key, map) =&gt; {
+  alert(`${key}: ${value}`); // огурец: 500 и так далее
+});</code></pre>
+        </div>
+      </div>
+      
+      </div><h2><a class="main__anchor" name="object-entries-map-iz-object" href="#object-entries-map-iz-object">Object.entries: Map из Object</a></h2><p>При создании <code>Map</code> мы можем указать массив (или другой итерируемый объект) с парами ключ-значение для инициализации, как здесь:</p>
+<div id="3ymokz4ox1" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>// массив пар [ключ, значение]
+let map = new Map([
+  ['1',  'str1'],
+  [1,    'num1'],
+  [true, 'bool1']
+]);
+
+alert( map.get('1') ); // str1</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Если у нас уже есть обычный объект, и мы хотели бы создать <code>Map</code> из него, то поможет встроенный метод <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/entries">Object.entries(obj)</a>, который получает объект и возвращает массив пар ключ-значение для него, как раз в этом формате.</p>
+<p>Так что мы можем создать <code>Map</code> из обычного объекта следующим образом:</p>
+<div id="x7njum0prs" data-trusted="1" class="code-example" data-highlight="[{&quot;start&quot;:5,&quot;end&quot;:5}]">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let obj = {
+  name: &quot;John&quot;,
+  age: 30
+};
+
+let map = new Map(Object.entries(obj));</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Здесь <code>Object.entries</code> возвращает массив пар ключ-значение: <code>[ [&quot;name&quot;,&quot;John&quot;], [&quot;age&quot;, 30] ]</code>. Это именно то, что нужно для создания <code>Map</code>.</p>
+<h2><a class="main__anchor" name="object-fromentries-object-iz-map" href="#object-fromentries-object-iz-map">Object.fromEntries: Object из Map</a></h2><p>Мы только что видели, как создать <code>Map</code> из обычного объекта при помощи <code>Object.entries(obj)</code>.</p>
+<p>Есть метод <code>Object.fromEntries</code>, который делает противоположное: получив массив пар вида <code>[ключ, значение]</code>, он создаёт из них объект:</p>
+<div id="l9ekhsr2yi" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let prices = Object.fromEntries([
+  ['banana', 1],
+  ['orange', 2],
+  ['meat', 4]
+]);
+
+// now prices = { banana: 1, orange: 2, meat: 4 }
+
+alert(prices.orange); // 2</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Мы можем использовать <code>Object.fromEntries</code>, чтобы получить обычный объект из <code>Map</code>.</p>
+<p>К примеру, у нас данные в <code>Map</code>, но их нужно передать в сторонний код, который ожидает обычный объект.</p>
+<p>Вот как это сделать:</p>
+<div id="qab87aebc5" data-trusted="1" class="code-example" data-highlight="[{&quot;start&quot;:5,&quot;end&quot;:5}]">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let map = new Map();
+map.set('banana', 1);
+map.set('orange', 2);
+map.set('meat', 4);
+
+let obj = Object.fromEntries(map.entries()); // make a plain object (*)
+
+// готово!
+// obj = { banana: 1, orange: 2, meat: 4 }
+
+alert(obj.orange); // 2</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Вызов <code>map.entries()</code> возвращает массив пар ключ/значение, как раз в нужном формате для <code>Object.fromEntries</code>.</p>
+<p>Мы могли бы написать строку <code>(*)</code> ещё короче:</p>
+<div id="826s6xrfo1" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let obj = Object.fromEntries(map); // убрать .entries()</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Это то же самое, так как <code>Object.fromEntries</code> ожидает перебираемый объект в качестве аргумента, не обязательно массив. А перебор <code>map</code> как раз возвращает пары ключ/значение, так же, как и <code>map.entries()</code>. Так что в итоге у нас будет обычный объект с теми же ключами/значениями, что и в <code>map</code>.</p>
+<h2><a class="main__anchor" name="set" href="#set">Set</a></h2><p>Объект <code>Set</code> – это особый вид коллекции: «множество» значений (без ключей), где каждое значение может появляться только один раз.</p>
+<p>Его основные методы это:</p>
+<ul>
+<li><code>new Set(iterable)</code> – создаёт <code>Set</code>, и если в качестве аргумента был предоставлен итерируемый объект (обычно это массив), то копирует его значения в новый <code>Set</code>.</li>
+<li><code>set.add(value)</code> – добавляет значение (если оно уже есть, то ничего не делает), возвращает тот же объект <code>set</code>.</li>
+<li><code>set.delete(value)</code> – удаляет значение, возвращает <code>true</code>, если <code>value</code> было в множестве на момент вызова, иначе <code>false</code>.</li>
+<li><code>set.has(value)</code> – возвращает <code>true</code>, если значение присутствует в множестве, иначе <code>false</code>.</li>
+<li><code>set.clear()</code> – удаляет все имеющиеся значения.</li>
+<li><code>set.size</code> – возвращает количество элементов в множестве.</li>
+</ul>
+<p>Основная «изюминка» – это то, что при повторных вызовах <code>set.add()</code> с одним и тем же значением ничего не происходит, за счёт этого как раз и получается, что каждое значение появляется один раз.</p>
+<p>Например, мы ожидаем посетителей, и нам необходимо составить их список. Но повторные визиты не должны приводить к дубликатам. Каждый посетитель должен появиться в списке только один раз.</p>
+<p>Множество <code>Set</code> – как раз то, что нужно для этого:</p>
+<div id="cxcfrzyr7v" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let set = new Set();
+
+let john = { name: &quot;John&quot; };
+let pete = { name: &quot;Pete&quot; };
+let mary = { name: &quot;Mary&quot; };
+
+// считаем гостей, некоторые приходят несколько раз
+set.add(john);
+set.add(pete);
+set.add(mary);
+set.add(john);
+set.add(mary);
+
+// set хранит только 3 уникальных значения
+alert(set.size); // 3
+
+for (let user of set) {
+  alert(user.name); // John (потом Pete и Mary)
+}</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Альтернативой множеству <code>Set</code> может выступать массив для хранения гостей и дополнительный код для проверки уже имеющегося элемента с помощью <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find">arr.find</a>. Но в этом случае будет хуже производительность, потому что <code>arr.find</code> проходит весь массив для проверки наличия элемента. Множество <code>Set</code> лучше оптимизировано для добавлений, оно автоматически проверяет на уникальность.</p>
+<h2><a class="main__anchor" name="perebor-obekta-set" href="#perebor-obekta-set">Перебор объекта Set</a></h2><p>Мы можем перебрать содержимое объекта set как с помощью метода <code>for..of</code>, так и используя <code>forEach</code>:</p>
+<div id="emmuwa25a1" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let set = new Set([&quot;апельсин&quot;, &quot;яблоко&quot;, &quot;банан&quot;]);
+
+for (let value of set) alert(value);
+
+// то же самое с forEach:
+set.forEach((value, valueAgain, set) =&gt; {
+  alert(value);
+});</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Заметим забавную вещь. Функция в <code>forEach</code> у <code>Set</code> имеет 3 аргумента: значение <code>value</code>, потом <em>снова то же самое значение</em> <code>valueAgain</code>, и только потом целевой объект. Это действительно так, значение появляется в списке аргументов дважды.</p>
+<p>Это сделано для совместимости с объектом <code>Map</code>, в котором колбэк <code>forEach</code> имеет 3 аргумента. Выглядит немного странно, но в некоторых случаях может помочь легко заменить <code>Map</code> на <code>Set</code> и наоборот.</p>
+<p><code>Set</code> имеет те же встроенные методы, что и <code>Map</code>:</p>
+<ul>
+<li><code>set.values()</code> – возвращает перебираемый объект для значений,</li>
+<li><code>set.keys()</code> – то же самое, что и <code>set.values()</code>, присутствует для обратной совместимости с <code>Map</code>,</li>
+<li><code>set.entries()</code> – возвращает перебираемый объект для пар вида <code>[значение, значение]</code>, присутствует для обратной совместимости с <code>Map</code>.</li>
+</ul>
+<h2><a class="main__anchor" name="itogo" href="#itogo">Итого</a></h2><p><code>Map</code> – коллекция пар ключ-значение.</p>
+<p>Методы и свойства:</p>
+<ul>
+<li><code>new Map([iterable])</code> – создаёт коллекцию, можно указать перебираемый объект (обычно массив) из пар <code>[ключ,значение]</code> для инициализации.</li>
+<li><code>map.set(key, value)</code> – записывает по ключу <code>key</code> значение <code>value</code>.</li>
+<li><code>map.get(key)</code> – возвращает значение по ключу или <code>undefined</code>, если ключ <code>key</code> отсутствует.</li>
+<li><code>map.has(key)</code> – возвращает <code>true</code>, если ключ <code>key</code> присутствует в коллекции, иначе <code>false</code>.</li>
+<li><code>map.delete(key)</code> – удаляет элемент по ключу <code>key</code>.</li>
+<li><code>map.clear()</code> – очищает коллекцию от всех элементов.</li>
+<li><code>map.size</code> – возвращает текущее количество элементов.</li>
+</ul>
+<p>Отличия от обычного объекта <code>Object</code>:</p>
+<ul>
+<li>Что угодно может быть ключом, в том числе и объекты.</li>
+<li>Есть дополнительные методы, свойство <code>size</code>.</li>
+</ul>
+<p><code>Set</code> – коллекция уникальных значений, так называемое «множество».</p>
+<p>Методы и свойства:</p>
+<ul>
+<li><code>new Set([iterable])</code> – создаёт <code>Set</code>, можно указать перебираемый объект со значениями для инициализации.</li>
+<li><code>set.add(value)</code> – добавляет значение (если оно уже есть, то ничего не делает), возвращает тот же объект <code>set</code>.</li>
+<li><code>set.delete(value)</code> – удаляет значение, возвращает <code>true</code> если <code>value</code> было в множестве на момент вызова, иначе <code>false</code>.</li>
+<li><code>set.has(value)</code> – возвращает <code>true</code>, если значение присутствует в множестве, иначе <code>false</code>.</li>
+<li><code>set.clear()</code> – удаляет все имеющиеся значения.</li>
+<li><code>set.size</code> – возвращает количество элементов в множестве.</li>
+</ul>
+<p>Перебор <code>Map</code> и <code>Set</code> всегда осуществляется в порядке добавления элементов, так что нельзя сказать, что это – неупорядоченные коллекции, но поменять порядок элементов или получить элемент напрямую по его номеру нельзя.</p>
+</div></article><div class="tasks formatted"><h2 class="tasks__title" id="tasks"><a class="tasks__title-anchor main__anchor main__anchor main__anchor_noicon" href="#tasks">Задачи</a></h2><div class="task tasks__task"><div class="task__header"><div class="task__title-wrap"><h3 class="task__title"><a class="main__anchor" href="#filtratsiya-unikalnyh-elementov-massiva" name="filtratsiya-unikalnyh-elementov-massiva">Фильтрация уникальных элементов массива</a></h3><a class="task__open-link" href="/task/array-unique-map" target="_blank"></a></div><div class="task__header-note"><span class="task__importance" title="Насколько эта задача важна для освоения материала, от 1 до 5">важность: 5</span></div><div class="task__content"><div class="task__formatted"><p>Допустим, у нас есть массив <code>arr</code>.</p>
+<p>Создайте функцию <code>unique(arr)</code>, которая вернёт массив уникальных, не повторяющихся значений массива <code>arr</code>.</p>
+<p>Например:</p>
+<div id="ue27bhy5er" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>function unique(arr) {
+  /* ваш код */
+}
+
+let values = [&quot;Hare&quot;, &quot;Krishna&quot;, &quot;Hare&quot;, &quot;Krishna&quot;,
+  &quot;Krishna&quot;, &quot;Krishna&quot;, &quot;Hare&quot;, &quot;Hare&quot;, &quot;:-O&quot;
+];
+
+alert( unique(values) ); // Hare,Krishna,:-O</code></pre>
+        </div>
+      </div>
+      
+      </div><p>P.S. Здесь мы используем строки, но значения могут быть любого типа.</p>
+<p>P.P.S. Используйте <code>Set</code> для хранения уникальных значений.</p>
+<p><a href="https://plnkr.co/edit/07p2WL8L4OaQo5Oe?p=preview" target="_blank" data-plunk-id="07p2WL8L4OaQo5Oe">Открыть песочницу с тестами для задачи.</a></p></div><button class="task__solution" type="button">решение</button><div class="task__answer"><div class="task__answer-content"><div class="task__formatted"><div id="uie0tuk9r2" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>function unique(arr) {
+  return Array.from(new Set(arr));
+}</code></pre>
+        </div>
+      </div>
+      
+      </div><p><a href="https://plnkr.co/edit/JUYl9zLhRXMC2Pxb?p=preview" target="_blank" data-plunk-id="JUYl9zLhRXMC2Pxb">Открыть решение с тестами в песочнице.</a></p></div></div><button class="close-button task__answer-close" type="button" title="закрыть"></button></div></div></div></div><div class="task tasks__task"><div class="task__header"><div class="task__title-wrap"><h3 class="task__title"><a class="main__anchor" href="#otfiltruyte-anagrammy" name="otfiltruyte-anagrammy">Отфильтруйте анаграммы</a></h3><a class="task__open-link" href="/task/filter-anagrams" target="_blank"></a></div><div class="task__header-note"><span class="task__importance" title="Насколько эта задача важна для освоения материала, от 1 до 5">важность: 4</span></div><div class="task__content"><div class="task__formatted"><p><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0">Анаграммы</a> – это слова, у которых те же буквы в том же количестве, но они располагаются в другом порядке.</p>
+<p>Например:</p>
+<div id="d967rqxxdw" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-none"><code>nap - pan
+ear - are - era
+cheaters - hectares - teachers</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Напишите функцию <code>aclean(arr)</code>, которая возвращает массив слов, очищенный от анаграмм.</p>
+<p>Например:</p>
+<div id="wzui70ajxw" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let arr = [&quot;nap&quot;, &quot;teachers&quot;, &quot;cheaters&quot;, &quot;PAN&quot;, &quot;ear&quot;, &quot;era&quot;, &quot;hectares&quot;];
+
+alert( aclean(arr) ); // &quot;nap,teachers,ear&quot; or &quot;PAN,cheaters,era&quot;</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Из каждой группы анаграмм должно остаться только одно слово, не важно какое.</p>
+<p><a href="https://plnkr.co/edit/QgKPNwJNpbLXgjkC?p=preview" target="_blank" data-plunk-id="QgKPNwJNpbLXgjkC">Открыть песочницу с тестами для задачи.</a></p></div><button class="task__solution" type="button">решение</button><div class="task__answer"><div class="task__answer-content"><div class="task__formatted"><p>Чтобы найти все анаграммы, давайте разобьём каждое слово на буквы и отсортируем их, а потом объединим получившийся массив снова в строку. После этого все анаграммы будут одинаковы.</p>
+<p>Например:</p>
+<div id="to3or70vjp" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-none"><code>nap, pan -&gt; anp
+ear, era, are -&gt; aer
+cheaters, hectares, teachers -&gt; aceehrst
+...</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Мы будем использовать отсортированные строки как ключи в коллекции Map, для того чтобы сопоставить каждому ключу только одно значение:</p>
+<div id="4bkgffu176" data-trusted="1" class="code-example" data-highlight="[{&quot;start&quot;:5,&quot;end&quot;:5}]">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>function aclean(arr) {
+  let map = new Map();
+
+  for (let word of arr) {
+    // разбиваем слово на буквы, сортируем и объединяем снова в строку
+    let sorted = word.toLowerCase().split(&quot;&quot;).sort().join(&quot;&quot;); // (*)
+    map.set(sorted, word);
+  }
+
+  return Array.from(map.values());
+}
+
+let arr = [&quot;nap&quot;, &quot;teachers&quot;, &quot;cheaters&quot;, &quot;PAN&quot;, &quot;ear&quot;, &quot;era&quot;, &quot;hectares&quot;];
+
+alert( aclean(arr) );</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Строка с отсортированными буквами получается в результате цепочки вызовов в строке <code>(*)</code>.</p>
+<p>Для удобства, давайте разделим это на несколько строк:</p>
+<div id="6spxiezgib" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let sorted = arr[i] // PAN
+  .toLowerCase() // pan
+  .split(&quot;&quot;) // [&quot;p&quot;,&quot;a&quot;,&quot;n&quot;]
+  .sort() // [&quot;a&quot;,&quot;n&quot;,&quot;p&quot;]
+  .join(&quot;&quot;); // anp</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Два разных слова <code>'PAN'</code> и <code>'nap'</code> принимают ту же самую форму после сортировки букв – <code>'anp'</code>.</p>
+<p>Следующая линия помещает слово в объект Map:</p>
+<div id="w2zh8eosu6" data-trusted="1" class="code-example">
+      <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>map.set(sorted, word);</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Если мы когда-либо ещё встретим слово в той же отсортированной форме, тогда это слово перезапишет значение с тем же ключом в объекте. Таким образом, нескольким словам у нас будет всегда соответствовать одна отсортированная форма.</p>
+<p>В конце <code>Array.from(map.values())</code> принимает итерируемый объект значений объекта Map (в данном случае нам не нужны ключи) и возвращает их в виде массива.</p>
+<p>Также в этом случае вместо <code>Map</code> мы можем использовать простой объект, потому что ключи являются строками.</p>
+<p>В этом случае решение может выглядеть так:</p>
+<div id="bz4jw2j8t2" data-trusted="1" class="code-example" data-demo="1">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>function aclean(arr) {
+  let obj = {};
+
+  for (let i = 0; i &lt; arr.length; i++) {
+    let sorted = arr[i].toLowerCase().split(&quot;&quot;).sort().join(&quot;&quot;);
+    obj[sorted] = arr[i];
+  }
+
+  return Object.values(obj);
+}
+
+let arr = [&quot;nap&quot;, &quot;teachers&quot;, &quot;cheaters&quot;, &quot;PAN&quot;, &quot;ear&quot;, &quot;era&quot;, &quot;hectares&quot;];
+
+alert( aclean(arr) );</code></pre>
+        </div>
+      </div>
+      
+      </div><p><a href="https://plnkr.co/edit/JdLFCgc6Sg3t6COy?p=preview" target="_blank" data-plunk-id="JdLFCgc6Sg3t6COy">Открыть решение с тестами в песочнице.</a></p></div></div><button class="close-button task__answer-close" type="button" title="закрыть"></button></div></div></div></div><div class="task tasks__task"><div class="task__header"><div class="task__title-wrap"><h3 class="task__title"><a class="main__anchor" href="#perebiraemye-klyuchi" name="perebiraemye-klyuchi">Перебираемые ключи</a></h3><a class="task__open-link" href="/task/iterable-keys" target="_blank"></a></div><div class="task__header-note"><span class="task__importance" title="Насколько эта задача важна для освоения материала, от 1 до 5">важность: 5</span></div><div class="task__content"><div class="task__formatted"><p>Мы хотели бы получить массив ключей <code>map.keys()</code> в переменную и далее работать с ними, например, применить метод <code>.push</code>.</p>
+<p>Но это не выходит:</p>
+<div id="otetbqnm37" data-trusted="1" class="code-example" data-highlight="[{&quot;start&quot;:6,&quot;end&quot;:8}]">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let map = new Map();
+
+map.set(&quot;name&quot;, &quot;John&quot;);
+
+let keys = map.keys();
+
+// Error: keys.push is not a function
+// Ошибка: keys.push -- это не функция
+keys.push(&quot;more&quot;);</code></pre>
+        </div>
+      </div>
+      
+      </div><p>Почему? Что нужно поправить в коде, чтобы вызов <code>keys.push</code> сработал?</p>
+</div><button class="task__solution" type="button">решение</button><div class="task__answer"><div class="task__answer-content"><div class="task__formatted"><p>Это потому что <code>map.keys()</code> возвращает итерируемый объект, а не массив.</p>
+<p>Мы можем конвертировать его в массив с помощью <code>Array.from</code>:</p>
+<div id="6xrv2fab0z" data-trusted="1" class="code-example" data-highlight="[{&quot;start&quot;:4,&quot;end&quot;:4}]">
+      <div class="codebox code-example__codebox">
+        
+        <div class="toolbar codebox__toolbar">
+          <div class="toolbar__tool">
+            <a href="#" title="выполнить" data-action="run" class="toolbar__button toolbar__button_run"></a>
+          </div>
+          <div class="toolbar__tool">
+            <a href="#" title="открыть в песочнице" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+          </div>
+        </div>
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers language-javascript"><code>let map = new Map();
+
+map.set(&quot;name&quot;, &quot;John&quot;);
+
+let keys = Array.from(map.keys());
+
+keys.push(&quot;more&quot;);
+
+alert(keys); // name, more</code></pre>
+        </div>
+      </div>
+      
+      </div></div></div><button class="close-button task__answer-close" type="button" title="закрыть"></button></div></div></div></div></div></div><div class="page__nav-wrap"><a class="page__nav page__nav_prev" href="/iterable" data-tooltip="Перебираемые объекты"><span class="page__nav-text"><span class="page__nav-text-shortcut"></span></span><span class="page__nav-text-alternate">Предыдущий урок</span></a><a class="page__nav page__nav_next" href="/weakmap-weakset" data-tooltip="WeakMap и WeakSet"><span class="page__nav-text"><span class="page__nav-text-shortcut"></span></span><span class="page__nav-text-alternate">Следующий урок</span></a></div><div class="article-tablet-foot tablet-only"><div class="article-tablet-foot__layout"><div class="share-icons"><span class="share-icons__title">Поделиться</span><a class="share share_tw" href="https://twitter.com/share?url=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a><a class="share share_fb" href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a><a class="share share_vk" href="https://vkontakte.ru/share.php?url=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a></div><div class="article-tablet-foot__map"><a class="map" href="/tutorial/map" data-action="tutorial-map"><span class="map__text">Карта учебника</span></a></div></div></div><div class="banner-bottom"><div class="banner-bottom__text">Проводим <a href="/courses">курсы по JavaScript и фреймворкам</a>.</div><button class="banner-bottom__close" data-banner-close="Courses" data-banner-close-message="Эта информация больше не будет выводиться." title="не показывать"></button></div><script>!!1&&"hideBannerCourses"in localStorage||(document.querySelector(".banner-bottom").style.display="flex");</script><div class="comments formatted" id="comments"><div class="comments__header"><h2 class="comments__header-title"><a href="#comments" name="comments">Комментарии</a></h2><div class="comments__read-before"><span class="comments__read-before-link">перед тем как писать…</span><div class="comments__read-before-popup"><div class="comments__read-before-popup-i"><ul><li>Если вам кажется, что в статье что-то не так - вместо комментария напишите <a href="https://github.com/javascript-tutorial/ru.javascript.info/issues/new">на GitHub</a>.</li><li>Для одной строки кода используйте тег <code>&lt;code&gt;</code>, для нескольких строк кода&nbsp;&mdash; тег <code>&lt;pre&gt;</code>, если больше 10 строк&nbsp;&mdash; ссылку на песочницу (<a href='https://plnkr.co/edit/?p=preview'>plnkr</a>, <a href='http://jsbin.com'>JSBin</a>, <a href='http://codepen.io'>codepen</a>…)</li><li>Если что-то непонятно в статье&nbsp;&mdash; пишите, что именно и с какого места.</li></ul></div></div></div></div><div id="disqus_thread"></div><script>var disqus_config = function() { if (!this.page) this.page = {}; Object.assign(this.page, {"url":"https:\/\/learn.javascript.ru\/map-set","identifier":"\/map-set"}); };</script><script>var disqus_shortname = "learnjavascriptru";</script><script>var disqus_enabled = true;</script></div></main></div><div class="sidebar page__sidebar sidebar sidebar_sticky-footer"><button class="sidebar__toggle" data-sidebar-toggle></button><a class="map" href="/tutorial/map" data-action="tutorial-map" data-tooltip="Карта учебника"></a><div class="sidebar__inner"><div class="sidebar__content"><div class="sidebar__section"><h4 class="sidebar__section-title">Раздел</h4><nav class="sidebar__navigation"><ul class="sidebar__navigation-links"><li class="sidebar__navigation-link"><a class="sidebar__link" href="/data-types">Типы данных</a></li></ul></nav></div><div class="sidebar__section"><h4 class="sidebar__section-title">Навигация по уроку</h4><nav class="sidebar__navigation"><ul class="sidebar__navigation-links"><li class="sidebar__navigation-link"><a class="sidebar__link" href="#map">Map</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#perebor-map">Перебор Map</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#object-entries-map-iz-object">Object.entries: Map из Object</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#object-fromentries-object-iz-map">Object.fromEntries: Object из Map</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#set">Set</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#perebor-obekta-set">Перебор объекта Set</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#itogo">Итого</a></li></ul></nav></div><div class="sidebar__section"><nav class="sidebar__navigation"><ul class="sidebar__navigation-links"><li class="sidebar__navigation-link"><a class="sidebar__link" href="#tasks">Задачи (3)</a></li><li class="sidebar__navigation-link"><a class="sidebar__link" href="#comments">Комментарии</a></li></ul></nav></div><div class="sidebar__section"><div class="sidebar__section-title">Поделиться</div><a class="share share_tw sidebar__share" href="https://twitter.com/share?url=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a><a class="share share_fb sidebar__share" href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a><a class="share share_vk sidebar__share" href="https://vkontakte.ru/share.php?url=https%3A%2F%2Flearn.javascript.ru%2Fmap-set" rel="nofollow"></a></div><div class="sidebar__section"><a class="sidebar__link" href="https://github.com/javascript-tutorial/ru.javascript.info/blob/master/1-js/05-data-types/07-map-set" rel="nofollow">Редактировать на GitHub</a></div></div></div></div></div></div><div class="page-footer"><ul class="page-footer__list"><li class="page-footer__item page-footer__item_copy">©&nbsp;2007—2021&nbsp; Илья Кантор</li><li class="page-footer__item page-footer__item_about"><a class="page-footer__link" href="/about">о проекте</a></li><li class="page-footer__item page-footer__item_contact"><a class="page-footer__link" href="/about#contact-us">связаться с нами</a></li><li class="page-footer__item page-footer__item_terms"><a class="page-footer__link" href="/terms">пользовательское соглашение</a></li><li class="page-footer__item page-footer__item_privacy"><a class="page-footer__link" href="/privacy">политика конфиденциальности</a></li><li class="page-footer__item page-footer__item_slack"><a class="page-footer__slack" href="http://slack.javascript.ru">slack-чат</a></li></ul></div></body></html>

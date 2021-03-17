@@ -1,0 +1,84 @@
+#main_div {
+    margin: auto;
+    width: 80%;
+    height: 300px;
+    background: rgb(199, 199, 199);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#header {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: blue;
+    padding: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+}
+
+#weather {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    height: calc(80%);
+
+    padding: 30px;
+}
+
+.day {
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    height: 60%;
+
+}
+
+
+.data_day {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 15%;
+    border-bottom: 2px blue solid;
+}
+.img_day{
+    width: 100%;
+    height: 55%;
+}
+.temperature_day {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+
+    font-size: 30px;
+
+
+}
+
+
+@media screen and (max-width: 978px) {
+    #main_div {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    #main_div {
+        height: 750px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    #main_div {
+        height: 1200px;
+    }
+}

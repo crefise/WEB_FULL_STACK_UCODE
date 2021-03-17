@@ -1,0 +1,134 @@
+body {
+    background: linear-gradient(to left,rgb(110, 108, 108), rgb(63, 63, 63));
+}
+h1 {
+    text-align: center;
+}
+#human_image {
+    width: 400px;
+    height: 400px;
+}
+#human_image_img {
+    width: 100%;
+    height: 100%;
+}
+#first_block {
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+#second_block {
+
+    display: flex;
+    align-items: center;
+}
+
+#human_image {
+
+    margin-left: 30px;
+
+}
+#button {
+    display: flex;
+
+    height: 130px;
+    width: 100%;
+    align-items: center;
+
+    justify-content: center;
+
+    
+
+}
+#button button{
+    color: white;
+    width: 500px;
+    height: 100%;
+    background: none;
+    font-size: 50px;
+    font-family: monospace;
+}
+
+#properties_div {
+    width: 500px;
+    height: 100px;
+    display: flex;
+    margin-left: 30px;
+}
+
+.properties_label {
+    color: white;
+    margin: 20px;
+    font-size: 30px;
+    font-family: monospace;
+
+}
+
+#calories {
+    font-size: 50px;
+}
+
+#button_div {
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.button_func {
+
+}
+.button_func {
+    border-radius: 10px;
+    margin: 50px;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#calories_div {
+    text-align: center;
+    margin-left: 50px;
+    width: 250px;
+    height: 200px;
+
+}
+
+.calories_label {
+    border: 1px black solid;
+    border-radius: 22px;
+    padding: 10px;
+    width: 200px;
+    height: 70px;
+    margin:auto;
+    margin-top: 60px;
+
+}
+#status_info {
+    background-color: red;
+    position: absolute;
+    top: 110px;
+    left: 390px;
+    font-size: 30px;
+    background: none;
+    color: white;
+}
+
+#hmara_div {
+    position: absolute;
+    top:50px;
+    left: 300px;
+    color: white;
+}
+
+#hmara_img {
+    width: 400px;
+    height: 200px;
+}
+
+
+#number_button {
+    width: 30px;
+    height: 25px;
+    margin-bottom: 5px;
+}
