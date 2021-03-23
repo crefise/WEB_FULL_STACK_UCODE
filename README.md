@@ -4,7 +4,7 @@
 <h3 align = "center">Challenges</h3>
 While this Sprint I learned the basics of HTML and CSS (tags, position, colors, tables, etc.)
 <table>
-<tr><td align = "center">Connect Web-Sprint00</td><td>The basics of HTML and CSS (tags, position, colors, tables, etc.)</td><tr>
+<tr><td>Connect Web-Sprint00</td><td>The basics of HTML and CSS (tags, position, colors, tables, etc.)</td><tr>
 <tr><td>Connect Web-Sprint01</td><td>Get advanced skills in HTML and CSS (hovering, rotation, adaptive layouts, drop-down menus, filtering, etc.)</td><tr>
 <tr><td>Connect Web-Sprint02</td><td>Introduction to JavaScript. Basic functions (alert, prompt, console.log, etc.).</td><tr>
 <tr><td>Connect Web-Sprint03</td><td>The OOP principles (encapsulation, polymorphism, and inheritance, etc.). Classes, methods, objects.</td><tr>
