@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="Name">Calculator</h1>
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th colspan="5" class="Result"><span id="history_span"></span><br>
+                        <span id="result_span">0</span></th>
+                </tr>                
+                <tr>
+                    <td class="Cell"><button value="M+">M+</button></td>
+                    <td class="Cell"><button value="M-">M-</button></td>
+                    <td class="Cell"><button value="CONVERT" id="Convert">Conv</button></td>
+                    <td class="Cell"><button value="MODE">MODE</button></td>
+                    <td class="Cell"><button value="IM">IM</button></td>
+                </tr>
+                <tr>
+                    <td class="Cell"><button value="MC">MC</button></td>
+                    <td class="Cell"><button value="C">C</button></td>
+                    <td class="Cell"><button value="+/-">+/-</button></td>
+                    <td class="Cell"><button value="%">%</button></td>
+                    <td class="Cell"><button value="/">&#247;</button></td>
+                </tr>
+                <tr>
+                    <td class="Cell"><button value="MR">MR</button></td>
+                    <td class="Cell"><button value="7">7</button></td>
+                    <td class="Cell"><button value="8">8</button></td>
+                    <td class="Cell"><button value="9">9</button></td>
+                    <td class="Cell"><button value="*">*</button></td>
+                </tr>
+                <tr>
+                    <td class="Cell"><button value="√">&#8730;x</button></td>
+                    <td class="Cell"><button value="4">4</button></td>
+                    <td class="Cell"><button value="5">5</button></td>
+                    <td class="Cell"><button value="6">6</button></td>
+                    <td class="Cell"><button value="+">+</button></td>
+                </tr>
+                <tr>
+
+                    <td class="Cell"><button value="^">x<sup>n</sub></button></td>
+                    <td class="Cell"><button value="1">1</button></td>
+                    <td class="Cell"><button value="2">2</button></td>
+                    <td class="Cell"><button value="3">3</button></td>
+                    <td class="Cell"><button value="-">-</button></td>
+                </tr>
+                <tr>
+                    <td class="Cell"><button value="X!">x!</button></td>
+                    <td class="Cell"><button value ="0">0</button></td>
+                    <td class="Cell"><button value=".">.</button></td>
+                    <td colspan="2" class="Cell" style="border: 1px solid white;"><button id="Ravno" value="=">=</button></td>
+                </tr>
+                <tfoot id = "list">
+                    <tr>
+                        <td colspan="2"><select class = "select_t">
+                            <option>centimeters</option>
+                            <option>kilometers</option>
+                            <option>meters</option>
+                            <option>grams</option>
+                            <option>kilograms</option>
+                            <option>tonnes</option>
+                            <option>square centimeters</option>
+                            <option>square kilometers</option>
+                            <option>square meter</option>
+                            <option>hectares</option>
+                        </select></td>
+                        <td class="Arrow"><button>></button></td>                       
+                        <td colspan="2"><select class = "select_t test">
+                            <option class = "opt">centimeters</option>
+                            <option class = "opt">kilometers</option>
+                            <option class = "opt">meters</option>
+                            <option class = "opt">grams</option>
+                            <option class = "opt">kilograms</option>
+                            <option class = "opt">tonnes</option>
+                            <option class = "opt">square centimeters</option>
+                            <option class = "opt">square kilometers</option>
+                            <option class = "opt">square meter</option>
+                            <option class = "opt">hectares</option>
+                        </select></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
