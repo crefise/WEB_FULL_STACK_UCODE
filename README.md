@@ -1,7 +1,7 @@
 # WEB_FULL_STACK_UCODE
 
 <b>During my study in UCODE-CONNECT, I needed to master FULL Stack Web, It was major STAGE_3.</b>
-<h1>Sprint00</h1>
+<h3 align = "center">Challenges</h3>
 While this Sprint I learned the basics of HTML and CSS (tags, position, colors, tables, etc.)
 <table>
 <tr><td>Connect Web-Sprint00</td><td>The basics of HTML and CSS (tags, position, colors, tables, etc.)</td><tr>
