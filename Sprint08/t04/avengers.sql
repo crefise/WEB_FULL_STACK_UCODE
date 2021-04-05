@@ -1,0 +1,1 @@
+SELECT Name FROM (SELECT * FROM  heroes JOIN teams on heroes.Id = teams.hero_id JOIN powers on heroes.Id = powers.hero_id);

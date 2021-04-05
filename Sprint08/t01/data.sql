@@ -1,0 +1,10 @@
+INSERT INTO heroes(Name, description, race, class_role) VALUES('Pudge', 'Suped duper man', 'orc', 'healer');
+INSERT INTO heroes(Name, description, race, class_role) VALUES('Mirana', 'BIG DESCRIPTION', 'neshet', 'healer');
+INSERT INTO heroes(Name, description, race, class_role) VALUES('Oracle', 'I dont know', 'orc', 'healer');
+INSERT INTO heroes(Name, description, race, class_role) VALUES('Void', 'DOTA2- BAD', 'tatarka', 'dps');
+INSERT INTO heroes(Name, description, class_role) VALUES('Superman', 'DAZZLE - TOP', 'dps');
+INSERT INTO heroes(Name, description, class_role) VALUES('Mepo', 'Kostya molodesh', 'dps');
+INSERT INTO heroes(Name, description, class_role) VALUES('Roshan', 'Ne ne ne ne', 'dps');
+INSERT INTO heroes(Name, description, class_role) VALUES('Girl', 'Kto ya', 'tankman');
+INSERT INTO heroes(Name, description, class_role) VALUES('BLackJack', 'YA ustal', 'tankman');
+INSERT INTO heroes(Name, description, class_role) VALUES('SexBoy', 'UCODE CONNECT', 'tankman');
