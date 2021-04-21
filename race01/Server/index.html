@@ -1,0 +1,34 @@
+<html>
+<script>
+//Code by: Nabi KAZ <www.nabi.ir>
+
+var socket = new WebSocket('ws://localhost:5355');
+
+// Open the socket
+socket.onopen = function(event) {
+    var msg = 'Helloolo maza faka.';
+
+    console.log('> ' + msg);
+
+    // Send an initial message
+    socket.send(msg);
+
+    // Listen for messages
+    socket.onmessage = function(event) {
+        console.log('< ' + event.data);
+    };
+
+    // Listen for socket closes
+    socket.onclose = function(event) {
+        console.log('Client notified socket has closed', event);
+    };
+
+    // To close the socket....
+    //socket.close()
+
+};
+</script>
+<body>
+<p>Please check the console log of your browser.</p>
+</body>
+</html>

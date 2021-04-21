@@ -1,0 +1,86 @@
+body {
+    background-image: url("../css/images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    animation: bg_animation 15s infinite;
+}
+@keyframes bg_animation{
+    0% {
+        background-size: 104% 104%;
+    }
+    50% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 104% 104%;
+    }
+}
+.main_form_div {
+    background: linear-gradient(to left,rgba(255, 0, 0, 0.247), rgb(124, 11, 11));
+
+    font-family: monospace;
+    color :white;
+    text-align: center;
+    margin-top: auto;
+    margin: 0 auto;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
+    transition: 1s;
+    border-radius: 30px;
+    border: 3px wheat solid;
+
+}
+.line_div {
+    margin-top: 10px;
+    width: 100%;
+    transition: 1s;
+
+}
+.text {
+    font-size: 50px;
+    font-family: monospace;
+    padding: 20px;
+}
+
+
+.input {
+    color: white;
+    width: 60%;
+    border: none;
+    background: none;
+    padding: 20px;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+
+    transition: 1s;
+    border-bottom: 2px white solid;
+
+}
+.input::placeholder {
+    color :white;
+    font-size: 30px;
+    
+}
+.input:focus {
+    outline: none;
+    border: 2px white solid;
+}
+
+
+
+.button {
+    margin-top: 25px;
+    border: 2px white solid;
+}
+.button:hover {
+    background-color: black;
+}
+
+.button:focus {
+    outline: none;
+}
